@@ -1,0 +1,243 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #0b0b0f;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.landing{
+  max-width: 1100px;
+  width: 100%;
+  background: radial-gradient(circle at 20% 30%, #0d0d1a, #000);
+  border-radius: 40px;
+  padding: 40px 30px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 170, 255, 0.15);
+}
+
+.main-title{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.main-title h1{
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  color: white;
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.subtitle{
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.subtitle span{
+  color: #88ddff;
+}
+
+/* ========================= */
+/* TREINADOR */
+/* ========================= */
+
+.coach-section{
+  margin-bottom: 50px;
+}
+
+.coach-card{
+  background: rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 25px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.coach-image{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00aaff;
+}
+
+.coach-info h2{
+  color: #00aaff;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.coach-name{
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.coach-info span{
+  color: #aaa;
+}
+
+/* ========================= */
+/* TIME */
+/* ========================= */
+
+.team-section{
+  margin-bottom: 45px;
+}
+
+.team-header{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.team-header h2{
+  color: white;
+  font-size: 2rem;
+}
+
+.team-divider{
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #00aaff,
+    #ff44aa,
+    transparent
+  );
+}
+
+.positions-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.position-card{
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(0,170,255,0.2);
+}
+
+.position-card h3{
+  color: white;
+  margin-bottom: 20px;
+}
+
+.player-list{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.player-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-image{
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff44aa;
+  margin-bottom: 10px;
+}
+
+.player-name{
+  color: #ccc;
+}
+
+.player-name strong{
+  color: white;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+.footer{
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-placeholder{
+  width: 60px;
+  height: 60px;
+  border: 2px dashed rgba(255,255,255,0.2);
+  border-radius: 12px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+.footer-text{
+  color: white;
+}
+
+.footer-text small{
+  color: #88ddff;
+}
+
+.footer-right{
+  color: #aaa;
+}
+
+.highlight{
+  color: #00aaff;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media(max-width: 768px){
+
+  .coach-card{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .team-header{
+    flex-direction: column;
+  }
+
+  .positions-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .footer{
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
